@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+            height: 200vh;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .box-1 {
+            border: 2px solid red;
+            background-color: rgb(236, 236, 152);
+            height: 30vh;
+        }
+
+        .box-2 {
+
+            border: 2px dotted rgb(72, 0, 255);
+            background-color: rgb(152, 236, 177);
+            height: 30vh;
+        }
+
+        .box {
+            padding: 1rem;
+            display: inline-block;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            border: .5rem dashed rgb(83, 14, 139);
+        }
+
+        button {
+            padding: 1rem;
+            position: fixed;
+            right: 5rem;
+            top: 2rem;
+        }
+
+        .b1 {
+            transform: rotate(45deg) skew(40deg);
+            /* transform-origin: top left; */
+
+        }
+
+        .box-3 {
+            /* position: relative; */
+            border: .32rem dotted rgb(20, 19, 18);
+            background-color: rgb(236, 152, 183);
+            height: 30vh;
+        }
+
+        .boxx {
+
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 10rem;
+            width: 10rem;
+            text-align: center;
+            border: 2px solid black;
+            perspective: 1000px;
+            perspective-origin: 200px;
+        }
+
+        .b3 {
+            transform: rotateX(40deg) rotateY(40deg);
+            background-color: red;
+            height: 100%;
+            border: 2px solid rgb(46, 24, 193);
+        }
+
+        .model {
+            position: fixed;
+            opacity: 0;
+            transform: translateY(-3rem) scale(2);
+            transition: opacity .5s, transform 1s;
+            z-index: 200;
+            background-color: white;
+            top: 10%;
+            left: 30%;
+            width: 40%;
+            border: 3px solid red;
+            padding: 5rem;
+        }
+        .open{
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .backdrope{
+            position:fixed;
+            height: 100%;
+            width: 100%;
+            background:black;
+            filter: blur(10rem);
+            opacity: .6;
+    
+        }
+    </style>
+</head>
+
+<body> 
+    <div class="backdrop"></div>
+    <div class="model">hello world in the model </div>
+    <button class="btn">Hello</button>
+    <div class="box-1">
+        <div class="box b1">Hello World </div>
+    </div>
+    <div class="box-2">
+        <div class="box b2">Hello World </div>
+    </div>
+    <div class="box-3">
+        <div class="boxx">
+            <div class="b3">hello</div>
+        </div>
+    </div>
+    <script src="del.js"></script>
+</body>
+
+</html>
